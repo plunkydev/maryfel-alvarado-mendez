@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F2EE;
+}
+
+/* Contenedor principal */
+.Continer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.btnSendMessageContiner button:first-child {
+    color: #fff;
+    background-color: #0a66c2;
+    border: none;
+}
+.btnSendMessageContiner > button:nth-of-type(2) {
+    background-color: #fff;
+    padding: 8px 12px;
+}
+button {
+    padding: clamp(6px, 10px, 12px);
+/*     padding: 12px 18px;
+ */    border-radius: 50px;
+}
+
+/* Tamaño dinámico para h1 */
+h1 {
+    font-size: clamp(1rem, 2.5vw, 3rem); /* Mínimo: 1.5rem, Flexible: 2.5vw, Máximo: 3rem */
+}
+
+/* Tamaño dinámico para párrafos */
+p, a, button {
+    margin: 0;
+    font-size: clamp(0.6rem, 2vw, 1.25rem); /* Mínimo: 1rem, Flexible: 2vw, Máximo: 1.25rem */
+}
+
+.heroContiner {
+    height: 200px;
+}
+
+/* Encabezado con imagen de fondo */
+.bgImgHero {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    background: url('./assets/fondoMadera.jpg') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.bgImgHero .logo {
+    height: 87%;
+    width: auto;
+    max-width: none;
+    margin: 6px 10px 5px 0;
+}
+
+
+
+/* Foto de perfil */
+.profile-photo {
+    position: relative;
+    top: -172px;
+    left: 30px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Información principal */
+.infoHeroContiner {
+    margin-top: 8%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    column-gap: 20px;
+}
+
+.infoHero, .infoUnivercity, .buttonAndContactContiner {
+    margin: 1rem;
+}
+
+.buttonAndContactContiner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.btnsHeroContiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infoContact > * {
+    color: #0a66c2;
+    font-size: clamp(0.6rem, 1.5vw, 1.15rem);
+    margin-top: 0;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .heroContiner {
+        height: 150px;
+    }
+
+    .profile-info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .profile-photo {
+        top: -107px;
+        width: 140px;
+        height: 140px;
+    }
+
+    
+    .bgImgHero {
+        height: 135px;
+    }
+
+    .bgImgHero .logo {
+        height: 87%;
+        width: auto;
+        max-width: none;
+        margin: 6px 10px 5px 0;
+    }
+
+    .profile-actions {
+        text-align: center;
+    }
+
+    /* Info Hero */
+
+    .infoHeroContiner {
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-contact {
+        font-size: 14px;
+    }
+
+    .profile-photo {
+        top: -82px;
+        left: 15px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .logo {
+        width: 89px;
+        margin: 14px;
+    }
+
+    .bgImgHero {
+        height: 100px;
+    }
+
+    /* Info hero */
+    .infoHeroContiner {
+        margin-top: 0%;
+    }
+
+    .heroContiner {
+        height: 100px;
+        margin-bottom: 2%;
+    }
+
+}
