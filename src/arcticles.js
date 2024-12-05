@@ -52,11 +52,5 @@ export const articles = [
         "description": "En este artículo se explicará qué son las habilidades docentes y cuáles son las indispensables que hay que aplicar en el aula",
         "image": "https://www.lucaedu.com/wp-content/uploads/2022/12/habilidades_docentes.jpg",
         "url": "https://www.lucaedu.com/habilidades-docentes/"
-    },
-    {
-        "title": "Tipos de juego - Luca",
-        "description": "En este artículo se expondrá qué es el juego libre y el juego guiado, explorando el rol de los adultos en ambos tipos de juego.",
-        "image": "https://i0.wp.com/www.lucaedu.com/wp-content/uploads/2022/06/tipos-de-juegos.jpg?fit=1200%2C750&ssl=1",
-        "url": "https://www.lucaedu.com/tipos-de-juego/"
     }
 ]
