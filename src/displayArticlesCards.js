@@ -1,25 +1,26 @@
 import logo from './assets/logoMaryfel.png'
 
-export function validateImage(url) {
-    return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve(true); // Imagen válida
-        img.onerror = () => resolve(false); // Imagen inválida
-        img.src = url;
-    });
+export function validateImage (url) {
+  return new Promise((resolve, reject) => {
+    // eslint-disable-next-line no-undef
+    const img = new Image()
+    img.onload = () => resolve(true) // Imagen válida
+    img.onerror = () => resolve(false) // Imagen inválida
+    img.src = url
+  })
 }
 
-export async function renderArticles(articles) {
-    const container = document.getElementById('articlesContainer');
-    container.innerHTML = '';
+export async function renderArticles (articles) {
+  const container = document.getElementById('articlesContainer')
+  container.innerHTML = ''
 
-    for (const article of articles) {
-        const isValid = await validateImage(article.image);
+  for (const article of articles) {
+    const isValid = await validateImage(article.image)
 
-        const card = document.createElement('div');
-        card.classList.add('article-card');
+    const card = document.createElement('div')
+    card.classList.add('article-card')
 
-        card.innerHTML = `
+    card.innerHTML = `
             <div class="card-content">
                 <a href="${article.url}" target="_blank" class="card-link">
                     <img src="${isValid ? article.image : logo}" 
@@ -29,8 +30,8 @@ export async function renderArticles(articles) {
                     <p class="card-description">${article.description}</p>
                 </a>
             </div>
-        `;
+        `
 
-        container.appendChild(card);
-    }
+    container.appendChild(card)
+  }
 }
