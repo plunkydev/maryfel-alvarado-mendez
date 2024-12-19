@@ -6,6 +6,16 @@ body {
     background-color: #F4F2EE;
 }
 
+.lineMediaLeft {
+    float: left;
+    width: 50%;
+}
+
+.lineMediaRigth {
+    float: right;
+    width: 70%;
+}
+
 /* Contenedor principal */
 .continer {
     display: flex;
@@ -105,7 +115,7 @@ a:hover {
     column-gap: 20px;
 }
 
-.infoHero, .buttonAndContactContiner, .acercaDeMiContiner, .featuredArticlesContiner {
+.infoHero, .buttonAndContactContiner, .acercaDeMiContiner, .featuredArticlesContiner, .academyFormationConatiner {
     margin: 1rem;
 }
 
