@@ -47,6 +47,10 @@ h1 {
     font-size: clamp(1rem, 2.5vw, 3rem); 
 }
 
+ul {
+    line-height: 2rem;
+}
+
 /* Tamaño dinámico para párrafos */
 p, a {
     margin: 0;
@@ -115,8 +119,8 @@ a:hover {
     column-gap: 20px;
 }
 
-.infoHero, .buttonAndContactContiner, .acercaDeMiContiner, .featuredArticlesContiner, .academyFormationConatiner {
-    margin: 1rem;
+.infoHero, .buttonAndContactContiner, .acercaDeMiContiner, .featuredArticlesContiner, .academyFormationConatiner, .experienciaLaboral {
+    margin: 1.3rem;
 }
 
 .buttonAndContactContiner {
