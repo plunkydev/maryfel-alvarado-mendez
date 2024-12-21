@@ -33,10 +33,12 @@ body {
     background-color: #0a66c2;
     border: none;
 }
-.btnSendMessageContiner > button:nth-of-type(2) {
+
+.btnSendMessageContiner>button:nth-of-type(2) {
     background-color: #fff;
     padding: 8px 12px;
 }
+
 button {
     padding: clamp(6px, 10px, 12px);
     border-radius: 50px;
@@ -44,7 +46,11 @@ button {
 
 /* Tamaño dinámico para h1 */
 h1 {
-    font-size: clamp(1rem, 2.5vw, 3rem); 
+    font-size: clamp(1rem, 2.5vw, 3rem);
+}
+
+h2 {
+    color: #0a66c2;
 }
 
 ul {
@@ -52,7 +58,8 @@ ul {
 }
 
 /* Tamaño dinámico para párrafos */
-p, a {
+p,
+a {
     margin: 0;
     font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: clamp(1.5rem, 1.8rem, 2.75rem);
@@ -119,7 +126,20 @@ a:hover {
     column-gap: 20px;
 }
 
-.infoHero, .buttonAndContactContiner, .acercaDeMiContiner, .featuredArticlesContiner, .academyFormationConatiner, .experienciaLaboral {
+.infoHero,
+.buttonAndContactContiner,
+.acercaDeMiContiner,
+.featuredArticlesContiner,
+.academyFormationConatiner,
+.experienciaLaboral,
+.cursos,
+.partisipacionesEventos,
+.publicaciones,
+.idiomas,
+.paquetesInformaticos,
+.herramientasSeo,
+.reconocimientos,
+.otros {
     margin: 1.3rem;
 }
 
@@ -138,7 +158,7 @@ a:hover {
     color: #fff;
 }
 
-.infoContact > * {
+.infoContact>* {
     color: #0a66c2;
     font-size: clamp(0.6rem, 1.5vw, 1.15rem);
     margin-top: 0;
@@ -192,6 +212,7 @@ a:hover {
     color: black;
     font-style: normal;
 }
+
 .card-link:hover {
     color: #0a66c2;
     font-weight: 400;
@@ -217,7 +238,7 @@ a:hover {
         height: 140px;
     }
 
-    
+
     .bgImgHero {
         height: 135px;
     }
