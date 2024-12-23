@@ -1,5 +1,6 @@
 /* Estilos generales */
 body {
+    display: grid;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -15,6 +16,145 @@ body {
     float: right;
     width: 70%;
 }
+
+/* NAVEGACION */
+#navMain {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+#navMain.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#navMain.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+
+/* ------------------ */
+.navPerfilContiner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.navPerfilContiner img {
+    width: clamp(32px, 10vw, 50px); /* Mínimo 32px, máximo 42px, adaptándose al ancho de la ventana */
+    height: clamp(32px, 10vw, 50px); /* Igual que el ancho para mantener la proporción */
+    border-radius: 50%;
+    margin: auto;
+}
+
+.navPerfilText {
+    margin-left: clamp(5px, 2vw, 10px); /* Ajuste del margen según el tamaño de pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navPerfilContiner h4 {
+    margin-left: clamp(2px, 1vw, 5px); /* Ajuste dinámico del margen */
+    font-weight: 500;
+    font-size: clamp(18px, 4vw, 24px); /* Tamaño adaptable, mínimo 18px, máximo 24px */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.navPerfilContiner p {
+    width: clamp(153px, 74vw, 701px); /* Ajusta el ancho entre 150px y 300px según el vw */
+    white-space: nowrap;              /* Evita los saltos de línea */
+    overflow: hidden;                 /* Oculta el texto que se desborda */
+    text-overflow: ellipsis;          /* Agrega los puntos suspensivos (...) */
+    font-size: clamp(12px, 2vw, 16px); /* Ajusta el tamaño de fuente dinámicamente */
+    font-weight: 400;
+    font-size: clamp(14px, 3vw, 18px); /* Tamaño adaptable, mínimo 14px, máximo 18px */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.navContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 0% 25px;
+    height: 70px;
+  }
+  
+  .imgMenuHamburgesa {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  .btnContainer {
+    margin-right: 36px;
+  }
+  .btn {
+    background-color: #fff;
+    border: none;
+    color: white;
+    display: flex;
+  }
+  
+  .menuList {
+    display: none;
+    position: absolute;
+    top: 68px;
+    right: 3.5%;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 13px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    justify-content: end;
+    align-items: flex-start;
+    width: 130px;
+    justify-content: center;
+    height: 130px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .menuItem {
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .menuItem button {
+    background-color: #fff;
+    border: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .menuItem button:hover {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+
+/* END NAVEGACION */
 
 /* Contenedor principal */
 .continer {
