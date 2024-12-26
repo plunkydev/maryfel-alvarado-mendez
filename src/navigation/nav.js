@@ -1,15 +1,18 @@
 import imgMenuHamburgesa from '../assets/menuIcon.png'
 import imgNav from '../assets/maryfelPerfil32x32.png'
 
-const nav = document.createElement('nav')
-nav.innerHTML = `<nav class="navContainer">
-                <div id="navPerfilContiner" class="navPerfilContiner"><img src="${imgNav}" alt="Perfil de Maryfel">
-                <div class="navPerfilText"><h4>Maryfel Alvarado Méndez</h4>
+const nav = document.createElement('div')
+nav.className = 'navContainer'
+nav.innerHTML = `<div id="navPerfilContiner" class="navPerfilContiner">
+                <img src="${imgNav}" alt="Perfil de Maryfel">
+                <div class="navPerfilText">
+                <h4>Maryfel Alvarado Méndez</h4>
                 <p>Escritora venezolana | Embajadora del idioma español | Editora y redactora web Senior</p>
                 </div>
                 </div>
                 <div class="btnContainer" id="btnContiner">
-                    <button id="btn" class="btn"><img id="imgMenuHamburgesa" class="imgMenuHamburgesa" src="${imgMenuHamburgesa}" alt="menu hamburgesa"></button>
+                    <button id="btn" class="btn">
+                    <img id="imgMenuHamburgesa" class="imgMenuHamburgesa" src="${imgMenuHamburgesa}" alt="menu hamburgesa"></button>
                     <div class="menuList" id="menuList">
                         <div class="menuItem">
                             <button id="btnHome">Home</button>
@@ -17,8 +20,7 @@ nav.innerHTML = `<nav class="navContainer">
                             <button id="btnContact">Contact</button>
                         </div>
                     </div>
-                </div>
-        </nav>`
+                </div>`
 
 function scrollNavEfect (nav) {
   const scrollThreshold = 200
