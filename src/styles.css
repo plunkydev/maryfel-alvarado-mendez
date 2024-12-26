@@ -1,6 +1,5 @@
 /* Estilos generales */
 body {
-    display: grid;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -23,10 +22,9 @@ body {
     z-index: 1000;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(-100%);
 }
 
 #navMain.visible {
@@ -72,7 +70,7 @@ body {
 }
 
 .navPerfilContiner p {
-    width: clamp(153px, 74vw, 701px); /* Ajusta el ancho entre 150px y 300px según el vw */
+    width: clamp(153px, 61vw, 701px); /* Ajusta el ancho entre 150px y 300px según el vw */
     white-space: nowrap;              /* Evita los saltos de línea */
     overflow: hidden;                 /* Oculta el texto que se desborda */
     text-overflow: ellipsis;          /* Agrega los puntos suspensivos (...) */
@@ -109,6 +107,8 @@ body {
     border: none;
     color: white;
     display: flex;
+    min-width: 31px;
+    min-height: 31px;
   }
   
   .menuList {
