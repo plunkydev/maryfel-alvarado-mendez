@@ -1,5 +1,6 @@
 import imgMenuHamburgesa from '../assets/menuIcon.png'
 import imgNav from '../assets/maryfelPerfil32x32.png'
+import { closeMenu } from '../utils/menu'
 
 const nav = document.createElement('div')
 nav.className = 'navContainer'
@@ -16,8 +17,8 @@ nav.innerHTML = `<div id="navPerfilContiner" class="navPerfilContiner">
                     <div class="menuList" id="menuList">
                         <div class="menuItem">
                             <button id="btnHome">Home</button>
-                            <button id="btnAbout">About</button>
-                            <button id="btnContact">Contact</button>
+                            <button id="btnacercaDeMiContiner">Acerca de Mi</button>
+                            <button id="btnArticulosDestacados">Articulos Destacados</button>
                         </div>
                     </div>
                 </div>`
@@ -51,6 +52,8 @@ function scrollToId (id) {
   } else {
     console.error(`No se encontró ningún elemento con el id: ${id}`)
   }
+
+  closeMenu()
 }
 
 export { nav, scrollNavEfect, scrollToId }
