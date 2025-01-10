@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/plunkydev/maryfel-alvarado-mendez/issues"
   },
-  "homepage": "https://github.com/plunkydev/maryfel-alvarado-mendez#readme"
+  "homepage": "https://github.com/plunkydev/maryfel-alvarado-mendez#readme",
+  "dependencies": {
+    "intersection-observer": "^0.12.2"
+  }
 }

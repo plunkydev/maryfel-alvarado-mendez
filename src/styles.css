@@ -363,6 +363,17 @@ a:hover {
     border-radius: 0 0 0 8px;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+  }
+  
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 
 /* Responsividad */
 @media (max-width: 768px) {
@@ -414,6 +425,7 @@ a:hover {
         padding: 10px;
     }
 }
+
 
 @media (max-width: 480px) {
     .profile-contact {

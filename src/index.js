@@ -1,6 +1,7 @@
 import { articles } from './arcticles'
 import { renderArticles } from './displayArticlesCards'
 import { nav, scrollNavEfect, scrollToId } from './navigation/nav.js'
+import { initScrollAnimation } from './utils/scrollAnimation.js'
 import { showMenu, closeMenu } from './utils/menu.js'
 import './styles.css'
 
@@ -20,14 +21,16 @@ const btnHome = document.getElementById('btnHome')
 const btnacercaDeMiContiner = document.getElementById('btnacercaDeMiContiner')
 const btnArticulosDestacados = document.getElementById('btnArticulosDestacados')
 
-btnToPerfil.addEventListener('click', () => scrollToId(home))
 btn.addEventListener('mouseover', showMenu)
 btn.addEventListener('click', closeMenu)
+
 btnHome.addEventListener('click', () => scrollToId(home))
-btnacercaDeMiContiner.addEventListener('click', () => scrollToId(acercaDeMiContiner))
+btnToPerfil.addEventListener('click', () => scrollToId(home))
+btnacercaDeMiContiner.addEventListener('click', () => { scrollToId(acercaDeMiContiner) })
 btnArticulosDestacados.addEventListener('click', () => scrollToId(ArticulosDestacados))
 
 document.addEventListener('DOMContentLoaded', () => {
+  initScrollAnimation('.hidden')
   renderArticles(articles)
 })
 document.addEventListener('scroll', () => scrollNavEfect(navContainer))
