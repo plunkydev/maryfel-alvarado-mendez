@@ -89,7 +89,7 @@ function scrollNavEfect (nav) {
   document.addEventListener('scroll', handleScroll)
 }
 
-function scrollToId (id) {
+/* function scrollToId (id) {
   if (id) {
     id.scrollIntoView({
       behavior: 'smooth',
@@ -108,6 +108,25 @@ function scrollToId (id) {
   }
 
   closeMenu()
+} */
+
+function scrollToId (id) {
+  if (id) {
+    // Obtiene la posición del elemento
+    const elementPosition = id.getBoundingClientRect().top + window.scrollY
+    const offset = 60 // Ajuste para compensar el espacio superior
+
+    // Desplazarse al elemento con el ajuste incluido
+    window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+    })
+
+    // Opcional: cerrar el menú si corresponde
+    closeMenu()
+  } else {
+    console.error(`No se encontró ningún elemento con el id: ${id}`)
+  }
 }
 
 export { nav, scrollNavEfect, scrollToId }
