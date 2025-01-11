@@ -42,8 +42,7 @@ const btnHerramientasSeo = document.getElementById('btnHerramientasSeo')
 const btnReconocimientos = document.getElementById('btnReconocimientos')
 const btnOtros = document.getElementById('btnOtros')
 
-btn.addEventListener('mouseover', showMenu)
-btn.addEventListener('click', closeMenu)
+btn.addEventListener('click', showMenu)
 
 btnHome.addEventListener('click', () => scrollToId(home))
 btnToPerfil.addEventListener('click', () => scrollToId(home))
@@ -65,4 +64,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderArticles(articles)
 })
 scrollNavEfect(navContainer)
-document.addEventListener('click', () => closeMenu())
+const continers = document.querySelectorAll('.continer')
+continers.forEach(container => container.addEventListener('click', () => closeMenu()))
