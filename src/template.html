@@ -67,6 +67,43 @@
 </head>
 
 <body>
+    <form action="#" class="contact_main__form"  method="POST">
+        <div class="contact_main__form_group">
+            <!-- Nombre Completo -->
+            <div class="contact_main__form_field">
+                <label for="name" class="contact_main__form_field_label">Nombre Completo</label>
+                <input type="text" class="contact_main__form_field_input" name="name" id="name"
+                    placeholder="Ingresa tu nombre completo" required />
+            </div>
+            <!-- Email -->
+            <div class="contact_main__form_field">
+                <label for="email" class="contact_main__form_field_label">Email</label>
+                <input type="email" class="contact_main__form_field_input" name="email" id="email"
+                    placeholder="Ingresa tu email" required />
+            </div>
+            <!-- Asunto -->
+            <div class="contact_main__form_field">
+                <label for="subject" class="contact_main__form_field_label">Asunto</label>
+                <input type="text" class="contact_main__form_field_input" name="subject" id="subject"
+                    placeholder="Ingresa el asunto" required />
+            </div>
+            <!-- Mensaje -->
+            <div class="contact_main__form_field">
+                <label for="message" class="contact_main__form_field_label">Mensaje</label>
+                <textarea name="message" id="message" class="contact_main__form_field_input"
+                    placeholder="Cuéntanos lo que necesitas" rows="4" required></textarea>
+            </div>
+            <!-- Botón Submit -->
+            <div class="contact_main__form_field">
+                <button type="button" id="closeForm" class="contact_main__form_field_button">
+                    Cerrar
+                </button>
+                <button type="submit" class="contact_main__form_field_button">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </form>
     <nav class="hidden" id="navMain"></nav>
     <div class="continer">
         <div id="heroContiner" class="heroContiner">
@@ -91,8 +128,7 @@
                     <p>2761 seguidores · Más de 500 contactos</p>
                 </div>
                 <div class="btnSendMessageContiner">
-                    <button type="button"><span><i class="fa-solid fa-paper-plane fa-sm"></i></span> Enviar
-                        Mensaje</button>
+                    <button type="button" id="contact"><span><i class="fa-solid fa-paper-plane fa-sm"></i></span> Contactame</button>
                     <button type="button">Más</button>
                 </div>
             </div>
