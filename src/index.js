@@ -3,6 +3,7 @@ import { renderArticles } from './displayArticlesCards'
 import { nav, scrollNavEfect, scrollToId } from './navigation/nav.js'
 import { initScrollAnimation } from './utils/scrollAnimation.js'
 import { showMenu, closeMenu } from './utils/menu.js'
+import { toggleForm } from './utils/forrm.js'
 import './styles.css'
 
 export const navContainer = document.getElementById('navMain')
@@ -41,9 +42,26 @@ const btnPaquetesInformaticos = document.getElementById('btnPaquetesInformaticos
 const btnHerramientasSeo = document.getElementById('btnHerramientasSeo')
 const btnReconocimientos = document.getElementById('btnReconocimientos')
 const btnOtros = document.getElementById('btnOtros')
+const btnContact = document.getElementById('contact')
+const btnContactMenu = document.getElementById('btnContactMenu')
+const closeWindowButon = document.getElementById('closeForm')
 
 btn.addEventListener('click', showMenu)
 
+btnContactMenu.addEventListener('click', (event) => {
+  event.stopPropagation()
+  closeMenu()
+  toggleForm()
+})
+
+closeWindowButon.addEventListener('click', () => {
+  toggleForm()
+})
+
+btnContact.addEventListener('click', (event) => {
+  event.stopPropagation()
+  toggleForm()
+})
 btnHome.addEventListener('click', () => scrollToId(home))
 btnToPerfil.addEventListener('click', () => scrollToId(home))
 btnacercaDeMiContiner.addEventListener('click', () => scrollToId(acercaDeMiContiner))
