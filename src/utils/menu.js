@@ -1,5 +1,6 @@
 import imgMenuHamburgesa from '../assets/menuIcon.png'
 import close from '../assets/close.png'
+import { continerBlur } from '../utils/forrm.js'
 import { menuList, img, btn } from '../index.js'
 
 export function closeMenu () {
@@ -10,10 +11,7 @@ export function closeMenu () {
   img.style.height = '30px'
 
   // Eliminar desenfoque de los elementos con la clase "container"
-  const containers = document.querySelectorAll('.continer')
-  containers.forEach(container => {
-    container.style.filter = 'none' // Quitar desenfoque
-  })
+  continerBlur(false)
 
   // Cambiar los eventos del botón
   btn.removeEventListener('click', closeMenu)
@@ -28,10 +26,7 @@ export function showMenu () {
   img.style.height = '20px'
 
   // Agregar desenfoque a los elementos con la clase "container"
-  const containers = document.querySelectorAll('.continer')
-  containers.forEach(container => {
-    container.style.filter = 'blur(5px)' // Aplicar desenfoque
-  })
+  continerBlur(true)
 
   // Cambiar los eventos del botón
   btn.removeEventListener('click', showMenu)
