@@ -17,6 +17,7 @@ nav.innerHTML = `<div id="navPerfilContiner" class="navPerfilContiner">
                     <div class="menuList" id="menuList">
                         <div class="menuItem">
                             <button id="btnHome">Home</button>
+                            <button id="btnContactMenu">Contactame</button>
                             <button id="btnacercaDeMiContiner">Acerca de Mi</button>
                             <button id="btnArticulosDestacados">Articulos Destacados</button>
                             <button id="btnAcademyFormation">Formación Académica</button>
@@ -88,27 +89,6 @@ function scrollNavEfect (nav) {
   nav.addEventListener('mouseleave', handleMouseLeave)
   document.addEventListener('scroll', handleScroll)
 }
-
-/* function scrollToId (id) {
-  if (id) {
-    id.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-
-    setTimeout(() => {
-      const offset = 60
-      window.scrollBy({
-        top: -offset,
-        behavior: 'smooth'
-      })
-    }, 0)
-  } else {
-    console.error(`No se encontró ningún elemento con el id: ${id}`)
-  }
-
-  closeMenu()
-} */
 
 function scrollToId (id) {
   if (id) {
