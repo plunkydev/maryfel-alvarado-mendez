@@ -161,6 +161,19 @@ body {
 /* END NAVEGACION */
 
 /* Contenedor principal */
+
+.continerBlur {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 25px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    filter: blur(5px);
+}
+
 .continer {
     display: flex;
     flex-direction: column;
@@ -172,11 +185,34 @@ body {
     overflow: hidden;
 }
 
+/* Estilo inicial del botón */
 .btnSendMessageContiner button:first-child {
-    color: #fff;
-    background-color: var(--color-primary);
-    border: none;
+    color: #fff; /* Texto blanco inicial */
+    background-color: var(--color-primary); /* Fondo azul inicial */
+    border: 1px solid var(--color-primary);
+    transition: all 0.3s ease; /* Para animaciones suaves */
+    cursor: pointer;
 }
+
+/* Estilo inicial para los elementos internos */
+.btnSendMessageContiner button:first-child * {
+    color: #fff; /* Los elementos internos también son blancos */
+    transition: all 0.3s ease;
+}
+
+/* Hover para el botón y todos los elementos internos */
+.btnSendMessageContiner button:first-child:hover {
+    color: var(--color-primary); /* Cambia el texto del botón a azul */
+    background-color: #fff; /* Cambia el fondo a blanco */
+    border-color: var(--color-primary);
+    box-shadow: 0 13px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover para los elementos internos del botón */
+.btnSendMessageContiner button:first-child:hover * {
+    color: var(--color-primary); /* Cambia el color de los elementos internos a azul */
+}
+
 
 .btnSendMessageContiner>button:nth-of-type(2) {
     background-color: #fff;
@@ -298,6 +334,8 @@ a:hover {
     justify-content: space-between;
 }
 
+
+
 .fa-solid {
     color: #fff;
 }
@@ -374,6 +412,76 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+
+
+/* Formulario */
+
+.contact_main__form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%; /* Ocupa el 95% del ancho disponible en pantallas pequeñas */
+    max-width: 360px; /* Máximo ancho en pantallas grandes */
+    background: #ffffff;
+    padding: 1.5rem; /* Reduce padding en proporción para pantallas pequeñas */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Oculto por defecto */
+  }
+  
+  .contact_main__form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaciado relativo entre los elementos */
+  }
+  
+  .contact_main__form_field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact_main__form_field_label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem; /* Tamaño relativo para escalar en pantallas pequeñas */
+    color: #333;
+  }
+  
+  .contact_main__form_field_input,
+  .contact_main__form_field textarea {
+    width: 90%; /* Ajusta automáticamente al contenedor */
+    padding: 0.8rem; /* Espaciado interno relativo */
+    font-size: 0.9rem; /* Ligera reducción en fuentes para pantallas pequeñas */
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .contact_main__form_field_input:focus,
+  .contact_main__form_field textarea:focus {
+    border-color: #007bff;
+  }
+  
+  .contact_main__form_field_button {
+    padding: 0.8rem 1rem; /* Botón más compacto en pantallas pequeñas */
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: #007bff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+  }
+  
+  .contact_main__form_field_button:hover {
+    background-color: var(--color-primary);
+  }
+  
+/* Fin de estilos Formulario */
 
 
 /* Responsividad */
