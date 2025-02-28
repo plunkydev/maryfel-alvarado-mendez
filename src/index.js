@@ -5,6 +5,7 @@ import { initScrollAnimation } from './utils/scrollAnimation.js'
 import { showMenu, closeMenu } from './utils/menu.js'
 import { toggleForm } from './utils/forrm.js'
 import './styles.css'
+import manifest from './manifest.js'
 
 export const navContainer = document.getElementById('navMain')
 navContainer.appendChild(nav)
@@ -84,3 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
 scrollNavEfect(navContainer)
 const continers = document.querySelectorAll('.continer')
 continers.forEach(container => container.addEventListener('click', () => closeMenu()))
+
+// Convierte el objeto manifest a una cadena JSON y lo encapsula en un Blob
+const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/json' })
+
+// Crea una URL temporal que apunta al Blob
+const manifestURL = URL.createObjectURL(manifestBlob)
+
+// Crea un elemento <link> y configura sus atributos para referenciar el manifest
+const manifestLink = document.createElement('link')
+manifestLink.setAttribute('rel', 'manifest')
+manifestLink.setAttribute('href', manifestURL)
+
+// Agrega el elemento <link> al <head> del documento
+document.head.appendChild(manifestLink)
