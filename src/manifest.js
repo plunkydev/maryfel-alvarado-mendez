@@ -5,7 +5,7 @@ import logo512 from './assets/webmanifestLogo512x512.png';
 const manifest = {
   "name": "Maryfel Alvarado Méndez",
   "short_name": "Maryfel",
-  "start_url": "http://localhost:8080/",
+  "start_url": "https://plunkydev.github.io/maryfel-alvarado-mendez/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
