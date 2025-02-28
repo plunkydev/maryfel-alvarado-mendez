@@ -1,6 +1,6 @@
 // src/manifest.js
-import logo192 from './assets/webmanifestLogo192x192.png';
-import logo512 from './assets/webmanifestLogo512x512.png';
+import logo192 from './assets/webmanifestLogo192x192.png'
+import logo512 from './assets/webmanifestLogo512x512.png'
 
 const manifest = {
   "name": "Maryfel Alvarado Méndez",
@@ -21,6 +21,6 @@ const manifest = {
       "type": "image/png"
     }
   ]
-};
+}
 
-export default manifest;
+export default manifest
